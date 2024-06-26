@@ -44,3 +44,14 @@ const sortedItems = items3.sort((a, b) => {
   return b.stock - a.stock;
 });
 console.log(sortedItems);
+//이름이 사이다인 제품 찾기
+const items4: Item[] = [
+  { name: "콜라", stock: 5 },
+  { name: "사이다", stock: 0 },
+  { name: "물", stock: 10 },
+  { name: "주스", stock: 2 },
+];
+const soda = items4.find((item) => {
+  return item.name === "사이다";
+});
+console.log(soda);
