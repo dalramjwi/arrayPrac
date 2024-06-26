@@ -40,7 +40,7 @@ const items3: Item[] = [
   { name: "물", stock: 10 },
   { name: "주스", stock: 2 },
 ];
-const sortedItems = items.sort((a, b) => {
+const sortedItems = items3.sort((a, b) => {
   return b.stock - a.stock;
 });
 console.log(sortedItems);
