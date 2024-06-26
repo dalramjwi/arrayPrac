@@ -43,3 +43,33 @@ var soda = items4.find(function (item) {
     return item.name === "사이다";
 });
 console.log(soda);
+//모든 상품의 총 재고 확인
+// reduce() 메서드는 배열의 각 요소에 대해 주어진 리듀서(reducer) 함수를 실행하고, 하나의 결과값을 반환합니다.
+var items5 = [
+    { name: "콜라", stock: 5 },
+    { name: "사이다", stock: 0 },
+    { name: "물", stock: 10 },
+    { name: "주스", stock: 2 },
+];
+var tottalStock = items5.reduce(function (total, item) {
+    return total + item.stock;
+}, 0);
+console.log(tottalStock);
+//모든 상품 이름 리스트 생성
+var itemNames = items5.map(function (item) {
+    return item.name;
+});
+//가격이 1000원 이상인 상품 나열
+var expensiveItems = items2.filter(function (item) {
+    return item.price > 1000;
+});
+//재고가 하나라도 있는지 확인
+// some() 메서드는 배열의 각 요소에 대해 주어진 콜백 함수를 실행하고, 콜백 함수가 최소한 한 번이라도 true를 반환하면 some() 메서드 자체도 true를 반환하는 배열 메서드입니다. 그렇지 않고 모든 요소에서 콜백 함수가 false를 반환하면 some() 메서드는 false를 반환합니다.
+var hasStock = items.some(function (item) {
+    return item.stock > 0;
+});
+//상품 이름과 가격으로 객체 생성
+var itemObject = items2.reduce(function (obj, item) {
+    obj[item.name] = item.price;
+    return obj;
+}, {});
