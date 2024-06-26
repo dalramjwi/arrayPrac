@@ -32,3 +32,14 @@ const item2List = items2.map((item: Item2) => {
   return `${item.name}: ${item.price}원`;
 });
 console.log(item2List);
+//재고가 많은 순서대로 상품 정렬
+const items3: Item[] = [
+  { name: "콜라", stock: 5 },
+  { name: "사이다", stock: 0 },
+  { name: "물", stock: 10 },
+  { name: "주스", stock: 2 },
+];
+const sortedItems = items.sort((a, b) => {
+  return b.stock - a.stock;
+});
+console.log(sortedItems);

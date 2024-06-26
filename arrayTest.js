@@ -20,3 +20,14 @@ var item2List = items2.map(function (item) {
     return "".concat(item.name, ": ").concat(item.price, "\uC6D0");
 });
 console.log(item2List);
+//재고가 많은 순서대로 상품 정렬
+var items3 = [
+    { name: "콜라", stock: 5 },
+    { name: "사이다", stock: 0 },
+    { name: "물", stock: 10 },
+    { name: "주스", stock: 2 },
+];
+var sortedItems = items.sort(function (a, b) {
+    return b.stock - a.stock;
+});
+console.log(sortedItems);
